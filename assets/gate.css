@@ -14,7 +14,7 @@ html:not(.unlocked) body{background:var(--bg)}
 .gate-card input{width:100%;padding:10px 12px;font-size:15px;border-radius:6px;
   border:1px solid var(--line);background:var(--bg);color:var(--ink);margin-bottom:10px}
 .gate-card input:focus{outline:2px solid var(--accent);outline-offset:1px}
-.gate-card button{width:100%;padding:10px;font-size:14px;font-weight:600;
-  background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.gate-card button{width:100%;padding:11px;font-size:14px;font-weight:600;
+  background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .gate-card button:disabled{opacity:.6}
 .gate-err{color:var(--loop);font-size:13px;margin:12px 0 0!important}

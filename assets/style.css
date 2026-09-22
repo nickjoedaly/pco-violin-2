@@ -1,16 +1,28 @@
 :root{
-  --bg:#faf9f7; --panel:#fff; --ink:#1c1b19; --muted:#6b6862; --line:#e3e0da;
-  --accent:#8a5a2b; --accent-soft:#f0e5d8; --loop:#c2410c; --ok:#3f6212;
-  --radius:10px; --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  /* Ground and ink borrowed from nickdalystudio.com — warm ivory, warm black —
+     then lightened, because this is a tool you sit with for an hour. */
+  --bg:#f5f2ea; --panel:#fbf9f5; --ink:#1f1c16; --muted:#6f6857;
+  --line:#ddd6c6;
+  /* Marine for anything you press, oxide for the loop. Both are the studio
+     site's accents, opened up a couple of steps so they read warm, not austere. */
+  --accent:#2d7a6b; --accent-soft:#e2ece7; --accent-ink:#f5f2ea;
+  --loop:#c2561f; --ok:#4d6b33;
+  --radius:14px;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
+  --serif:Charter,"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:ui-rounded,"SF Pro Rounded","Hiragino Maru Gothic ProN",-apple-system,
+         BlinkMacSystemFont,"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){
-  --bg:#171614; --panel:#211f1c; --ink:#eceae6; --muted:#9a958c; --line:#35322d;
-  --accent:#d9a066; --accent-soft:#2e2620; --loop:#f97316; --ok:#a3b18a;}}
+  --bg:#16181a; --panel:#1e2123; --ink:#eae7df; --muted:#948d7f;
+  --line:#32373a;
+  --accent:#6fc0ad; --accent-soft:#1e2f2b; --accent-ink:#12201d;
+  --loop:#f08a4b; --ok:#a9c28a;}}
 :root[data-theme=dark]{
-  --bg:#171614; --panel:#211f1c; --ink:#eceae6; --muted:#9a958c; --line:#35322d;
-  --accent:#d9a066; --accent-soft:#2e2620; --loop:#f97316; --ok:#a3b18a;}
+  --bg:#16181a; --panel:#1e2123; --ink:#eae7df; --muted:#948d7f;
+  --line:#32373a;
+  --accent:#6fc0ad; --accent-soft:#1e2f2b; --accent-ink:#12201d;
+  --loop:#f08a4b; --ok:#a9c28a;}
 
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
@@ -20,7 +32,7 @@ a{color:var(--accent)}
 header.site{border-bottom:1px solid var(--line);margin-bottom:28px;padding:22px 0 16px}
 header.site .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--muted)}
-header.site h1{font-family:var(--serif);font-size:30px;margin:6px 0 2px;line-height:1.2}
+header.site h1{font-family:var(--serif);font-size:32px;margin:6px 0 2px;line-height:1.15;letter-spacing:-.01em}
 header.site p{margin:0;color:var(--muted);font-size:14px}
 .back{font-family:var(--mono);font-size:12px;text-decoration:none;display:inline-block;margin-bottom:10px}
 h2{font-family:var(--serif);font-size:21px;margin:34px 0 10px;
@@ -40,20 +52,20 @@ p,li{font-size:15px}
 /* player */
 .track-label{font-family:var(--mono);font-size:11px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.scrub{position:relative;height:42px;background:var(--accent-soft);border-radius:6px;
+.scrub{position:relative;height:44px;background:var(--accent-soft);border-radius:10px;
   overflow:hidden;cursor:pointer;margin:10px 0;border:1px solid var(--line)}
 .scrub .chunk{position:absolute;top:0;bottom:0;border-right:1px solid var(--line)}
-.scrub .chunk:hover{background:rgba(138,90,43,.14)}
+.scrub .chunk:hover{background:rgb(45 122 107 / .16)}
 .scrub .chunk span{position:absolute;left:4px;top:3px;font-family:var(--mono);
   font-size:9px;color:var(--muted);pointer-events:none;white-space:nowrap}
-.scrub .loopband{position:absolute;top:0;bottom:0;background:rgba(194,65,12,.20);
+.scrub .loopband{position:absolute;top:0;bottom:0;background:rgb(194 86 31 / .20);
   pointer-events:none;border-left:2px solid var(--loop);border-right:2px solid var(--loop)}
 .scrub .head{position:absolute;top:0;bottom:0;width:2px;background:var(--ink);pointer-events:none}
 .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}
-button{font-family:var(--sans);font-size:13px;padding:6px 11px;border-radius:6px;
+button{font-family:var(--sans);font-size:13px;padding:6px 12px;border-radius:9px;
   border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
 button:hover{border-color:var(--accent)}
-button.on{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+button.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 button.play{min-width:74px;font-weight:600}
 .time{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
 .ctl{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
@@ -63,7 +75,7 @@ kbd{font-family:var(--mono);font-size:11px;border:1px solid var(--line);
   border-radius:4px;padding:1px 5px;background:var(--bg)}
 .chunklist{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .chunklist button{font-family:var(--mono);font-size:11px;padding:4px 8px}
-.chunklist button.cur{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.chunklist button.cur{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .score-slot{border:1.5px dashed var(--line);border-radius:var(--radius);padding:20px;
   text-align:center;color:var(--muted);font-size:14px}
 .notes ul{padding-left:18px;margin:6px 0}
