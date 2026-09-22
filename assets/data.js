@@ -310,7 +310,7 @@ window.PCO = {
    "tracks": [
     {
      "id": "typewriter",
-     "label": "Our run",
+     "label": "Full run",
      "file": "audio/typewriter.m4a",
      "dur": 162.5,
      "kind": "rehearsal",
@@ -356,59 +356,6 @@ window.PCO = {
        "name": "Chunk 10"
       }
      ]
-    },
-    {
-     "id": "typewriter-reference",
-     "label": "Reference recording",
-     "file": "audio/typewriter-reference.m4a",
-     "dur": 281.4,
-     "kind": "reference",
-     "chunks": [
-      {
-       "t": 0.0,
-       "name": "Chunk 1"
-      },
-      {
-       "t": 4.0,
-       "name": "Chunk 2"
-      },
-      {
-       "t": 45.4,
-       "name": "Chunk 3"
-      },
-      {
-       "t": 59.0,
-       "name": "Chunk 4"
-      },
-      {
-       "t": 97.4,
-       "name": "Chunk 5"
-      },
-      {
-       "t": 112.5,
-       "name": "Chunk 6"
-      },
-      {
-       "t": 149.6,
-       "name": "Chunk 7"
-      },
-      {
-       "t": 163.1,
-       "name": "Chunk 8"
-      },
-      {
-       "t": 214.5,
-       "name": "Chunk 9"
-      },
-      {
-       "t": 234.0,
-       "name": "Chunk 10"
-      },
-      {
-       "t": 265.1,
-       "name": "Chunk 11"
-      }
-     ]
     }
    ],
    "scoreFiles": [
@@ -417,12 +364,12 @@ window.PCO = {
      "file": "scores/the-typewriter.pdf"
     }
    ],
-   "blurb": "Our run is about two and three-quarter minutes. The reference recording runs 4:41 — longer than the piece, so it likely carries applause or a repeat at the end; worth checking before you trust the back half.",
+   "blurb": "One continuous run of roughly two and three-quarter minutes.",
    "notes": {
     "What the part tells us": [
      "<b>Allegro vivace</b>, cut time, one sharp (G major). Rehearsal marks are boxed numbers at <b>9, 27 and 43</b>.",
      "Our PDF is Alfred 25039 — the same edition as the paper parts, so bar numbers match.",
-     "Tempo estimated from the reference recording is about <b>156 BPM</b>. (The same estimate run on our own phone recording came out at half that — the 8 kHz audio fools it, so trust the reference.)"
+     "Working tempo is around <b>156 BPM</b>. Worth knowing: the same estimate run on our own phone recording came out at half that — the 8 kHz audio fools it — so do not trust a metronome mark derived from the rehearsal audio."
     ],
     "Playing it": [
      "We are accompaniment throughout; the typewriter is the soloist. Bar after bar is off-beat quarters and rests — uniformity matters more than anything else.",
