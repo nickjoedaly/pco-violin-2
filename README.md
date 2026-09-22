@@ -44,6 +44,34 @@ Source files were 8 kHz mono AMR voice memos from a phone. They were loudness-no
 and transcoded to AAC for the web — browsers cannot play AMR. Untouched originals live in
 Google Drive under *Groups + Activities → Pocono Community Orchestra*.
 
+## Password
+
+The site is gated by a password (`assets/auth.js`). The password is not stored in the
+source — only a PBKDF2-SHA256 hash of it, with a salt and 150,000 iterations. Once entered
+it is remembered in `localStorage`, so the section enters it once per browser.
+
+To change it, derive a new hash and replace `SALT`/`HASH` in `assets/auth.js`:
+
+```bash
+python3 -c "import hashlib,os,binascii; s=os.urandom(16); \
+print('SALT',binascii.hexlify(s).decode()); \
+print('HASH',binascii.hexlify(hashlib.pbkdf2_hmac('sha256',b'NEWPASSWORD',s,150000,32)).decode())"
+```
+
+### What the gate does and does not do
+
+It stops someone who lands on the URL from browsing the site, and it keeps the password
+out of the source. It is **not** security:
+
+- The site is static, so `audio/peter-1.m4a` and everything under `scores/` can be fetched
+  directly by URL without the gate ever loading.
+- All of the gate's code is readable in view-source.
+
+If the password needs to actually mean something, the options are to encrypt the audio and
+scores at rest and decrypt them in-browser with a key derived from the password, or to put
+the whole site behind a real access proxy (Cloudflare Access's free tier does this with
+email one-time codes).
+
 ## Not for distribution
 
 These are rehearsal recordings of works still under copyright, kept for our own section's

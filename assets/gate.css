@@ -1,0 +1,20 @@
+/* Content stays hidden until auth.js adds .unlocked to <html>.
+   Also means the page renders nothing with JavaScript disabled. */
+html:not(.unlocked) body > .wrap{display:none}
+html:not(.unlocked) body{background:var(--bg)}
+
+#gate{position:fixed;inset:0;display:grid;place-items:center;padding:20px;
+  background:var(--bg);z-index:999}
+.gate-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px;max-width:360px;width:100%;text-align:center}
+.gate-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted)}
+.gate-card h1{font-family:var(--serif);font-size:24px;margin:8px 0 10px;line-height:1.2}
+.gate-card p{font-size:14px;color:var(--muted);margin:0 0 16px}
+.gate-card input{width:100%;padding:10px 12px;font-size:15px;border-radius:6px;
+  border:1px solid var(--line);background:var(--bg);color:var(--ink);margin-bottom:10px}
+.gate-card input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.gate-card button{width:100%;padding:10px;font-size:14px;font-weight:600;
+  background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.gate-card button:disabled{opacity:.6}
+.gate-err{color:var(--loop);font-size:13px;margin:12px 0 0!important}
