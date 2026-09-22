@@ -1,0 +1,89 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Piece · Violin 2 Practice Room</title>
+<link rel="stylesheet" href="assets/style.css">
+</head><body><div class="wrap">
+<header class="site">
+  <a class="back" href="index.html">&larr; All pieces</a>
+  <div class="kicker" id="kick"></div>
+  <h1 id="title"></h1>
+  <p id="sub"></p>
+</header>
+<main>
+  <p id="blurb"></p>
+  <h2>Rehearsal audio</h2>
+  <div id="players"></div>
+
+  <h2>Sheet music</h2>
+  <div id="score"></div>
+
+  <h2>Performance notes</h2>
+  <div class="notes" id="notes"></div>
+
+  <h2>Section notes</h2>
+  <div class="card">
+    <p class="hint" style="margin:0">Space for what Chris actually says in rehearsal —
+      bowings, cuts, tempo changes, who has the pickup. Add them to this piece's entry in
+      <code>assets/data.js</code> and they'll appear here for everyone.</p>
+  </div>
+</main>
+<footer><p><b>Pocono Community Orchestra — Violin 2.</b> Recordings by Chris Souza.
+  Built for section practice only; not for distribution.</p></footer>
+</div>
+<script src="assets/data.js"></script>
+<script src="assets/player.js"></script>
+<script>
+const id = new URLSearchParams(location.search).get('p');
+const p  = PCO.pieces.find(x=>x.id===id) || PCO.pieces[0];
+document.title = p.title + ' · Violin 2 Practice Room';
+kick.textContent  = PCO.ensemble + ' · ' + PCO.section;
+title.textContent = p.title;
+sub.textContent   = p.composer + ' · ' + p.sub;
+blurb.textContent = p.blurb;
+
+p.tracks.forEach(t=>{
+  const d = document.createElement('div');
+  d.className = 'card';
+  players.appendChild(d);
+  new PCOPlayer(t, d);
+});
+
+// score slot
+score.innerHTML = (p.scoreFiles && p.scoreFiles.length)
+  ? p.scoreFiles.map(f=>`<div class="card"><a href="${f.file}">${f.label}</a></div>`).join('')
+  : `<div class="score-slot">
+       <p style="margin:0 0 6px"><b>No score on file yet.</b></p>
+       <p style="margin:0;font-size:13px">Scan or photograph your Violin 2 part, save it as
+          <code>scores/${p.id}.pdf</code> in this repo, then add it to this piece's
+          <code>scoreFiles</code> in <code>assets/data.js</code>.</p>
+       <p style="margin:8px 0 0;font-size:13px">All three pieces are still under copyright,
+          so there is no legitimate free download to link — it has to come from our own parts.</p>
+     </div>`;
+
+// notes
+notes.innerHTML = Object.entries(p.notes).map(([h,items])=>
+  `<h3>${h}</h3><ul>${items.map(i=>'<li>'+i+'</li>').join('')}</ul>`).join('');
+
+// keyboard shortcuts drive the player nearest the top of the viewport
+document.addEventListener('keydown', e=>{
+  if(/INPUT|TEXTAREA/.test(e.target.tagName)) return;
+  const cards = [...document.querySelectorAll('#players .card')];
+  const card = cards.find(c=>c.getBoundingClientRect().bottom>60) || cards[0];
+  if(!card) return;
+  const q = s => card.querySelector(s);
+  const k = e.key;
+  if(k===' '){ e.preventDefault(); q('[data-play]').click(); }
+  else if(k==='ArrowLeft')  q('[data-back]').click();
+  else if(k==='ArrowRight') q('[data-fwd]').click();
+  else if(k==='[') q('[data-a]').click();
+  else if(k===']') q('[data-b]').click();
+  else if(k==='l') q('[data-loop]').click();
+  else if(k===','||k==='.'){
+    const btns=[...card.querySelectorAll('[data-chunks] button')];
+    let i=btns.findIndex(b=>b.classList.contains('cur'));
+    i = k===','? Math.max(0,i-1) : Math.min(btns.length-1,i+1);
+    btns[i]&&btns[i].click();
+  }
+});
+</script>
+</body></html>

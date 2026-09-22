@@ -1,0 +1,62 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Violin 2 Practice Room</title>
+<meta name="description" content="Rehearsal recordings, scores and notes for the Pocono Community Orchestra Violin 2 section.">
+<link rel="stylesheet" href="assets/style.css">
+</head><body><div class="wrap">
+<header class="site">
+  <div class="kicker" id="kick"></div>
+  <h1>Violin 2 Practice Room</h1>
+  <p id="src"></p>
+</header>
+<main>
+  <p>Rehearsal recordings from our section, broken into chunks you can loop.
+     Pick a piece to get the player, the score slot and the notes.</p>
+  <div id="list"></div>
+
+  <h2>How to use this</h2>
+  <ul>
+    <li><b>Click a chunk</b> — on the strip or in the list — and it loops that chunk until you stop it.</li>
+    <li><b>Set A / Set B</b> mark your own loop points if a chunk boundary is in the wrong place.</li>
+    <li><b>Speed</b> slows playback to 50% without dropping the pitch, so it stays in tune as you work it up.</li>
+    <li><b>Count-in</b> gives you four clicks before the loop restarts, so you enter in time rather than scrambling.</li>
+    <li><b>Edit markers</b> lets you rename chunks to real rehearsal letters or bar numbers as you listen.</li>
+  </ul>
+
+  <h2>About the chunk markers</h2>
+  <p>The chunk boundaries were found automatically, by detecting where the texture of the
+     recording changes. They are a scaffold, not rehearsal letters — the names are
+     <i>Chunk 1</i>, <i>Chunk 2</i> and so on because nothing in the audio says otherwise.</p>
+  <p>Rename them as you go. Open <b>Edit markers</b>, play until you reach a landmark you
+     recognise, and name it — <i>Letter C</i>, <i>m. 48</i>, <i>the wolf</i>. Your names save
+     in your browser straight away. To make them permanent for the whole section, copy the
+     JSON the editor shows you into <code>assets/data.js</code> and commit it.</p>
+
+  <h2>Recording quality</h2>
+  <p>These came off a phone as 8&nbsp;kHz mono voice-memo files, which is why they sound
+     boxy. Levels have been evened out so the quiet passages are audible, but the
+     bandwidth is what it is. The untouched originals are in the Drive folder.</p>
+</main>
+<footer>
+  <p><b>Pocono Community Orchestra — Violin 2.</b> Recordings by Chris Souza.
+     Built for section practice only; not for distribution.</p>
+  <p>Audio and scores also live in Google&nbsp;Drive under
+     <i>Groups + Activities → Pocono Community Orchestra</i>.</p>
+</footer>
+</div>
+<script src="assets/data.js"></script>
+<script>
+document.getElementById('kick').textContent = PCO.ensemble + ' · ' + PCO.section;
+document.getElementById('src').textContent  = PCO.source;
+document.getElementById('list').innerHTML = PCO.pieces.map(p=>{
+  const total = p.tracks.reduce((s,t)=>s+t.dur,0);
+  const chunks = p.tracks.reduce((s,t)=>s+t.chunks.length,0);
+  const m = Math.floor(total/60), s = Math.round(total%60);
+  return `<a class="card piece-link" href="piece.html?p=${p.id}">
+    <div class="t">${p.title}</div>
+    <div class="c">${p.composer} · ${p.sub}</div>
+    <div class="meta">${p.tracks.length} recording${p.tracks.length>1?'s':''}
+      · ${m}:${String(s).padStart(2,'0')} · ${chunks} chunks</div></a>`;
+}).join('');
+</script>
+</body></html>

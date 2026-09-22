@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "violin2",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "/Users/nicholasdaly/Developer/pco-violin-2/tools/serve.py",
+        "4362"
+      ],
+      "port": 4362,
+      "autoPort": false
+    }
+  ]
+}
