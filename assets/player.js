@@ -47,13 +47,13 @@ class Player {
       <div class="chunklist" data-chunks></div>
       <div class="editor" data-editor>
         <div class="row">
-          <button data-addmark>Add marker at playhead</button>
+          <button data-addmark>Add marker here</button>
           <button data-renamemark>Rename current</button>
           <button data-delmark>Delete current</button>
-          <button data-reset>Reset to defaults</button>
+          <button data-reset>Start over</button>
         </div>
-        <p class="hint">Markers save to this browser automatically. Copy the JSON below into
-        <code>assets/data.js</code> to make them permanent for everyone.</p>
+        <p class="hint">Your names are saved in this browser. To share them with the section,
+        send Nick the line below.</p>
         <textarea data-json readonly></textarea>
       </div>
       <p class="hint"><kbd>space</kbd> play/pause · <kbd>←</kbd><kbd>→</kbd> 5s ·
@@ -82,7 +82,7 @@ class Player {
       this.$('[data-speedv]').textContent = v+'%'; };
 
     this.$('[data-addmark]').onclick = ()=>{
-      const name = prompt('Marker name (e.g. "Letter C", "m. 48", "wolf theme")','');
+      const name = prompt('Name this spot \u2014 e.g. "11", "the wolf", "bar 48"','');
       if(name===null) return;
       this.chunks.push({t:+this.a.currentTime.toFixed(1), name:name||'Marker'});
       this.chunks.sort((x,y)=>x.t-y.t); this.save(); };
@@ -95,7 +95,7 @@ class Player {
       const i = this.curChunk(); if(i<0) return;
       if(confirm('Delete marker "'+this.chunks[i].name+'"?')){ this.chunks.splice(i,1); this.save(); } };
     this.$('[data-reset]').onclick = ()=>{
-      if(!confirm('Reset markers to the shipped defaults?')) return;
+      if(!confirm('Throw away your names and go back to numbered chunks?')) return;
       this.chunks = this.tr.chunks.map(c=>({...c}));
       localStorage.removeItem(LS('chunks:'+this.tr.id)); this.save(); };
 
@@ -160,7 +160,7 @@ class Player {
     lb.textContent = 'Loop '+(on?'on':'off');
   }
   toggleLoop(){
-    if(this.loopA==null || this.loopB==null){ alert('Set A and B first, or click a chunk.'); return; }
+    if(this.loopA==null || this.loopB==null){ alert('Pick a chunk, or set A and B first.'); return; }
     this.looping = !this.looping; this.fixLoop();
   }
 

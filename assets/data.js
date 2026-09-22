@@ -279,26 +279,26 @@ window.PCO = {
    ],
    "scoreFiles": [
     {
-     "label": "Violin II part — Kalmus edition, 8 pages",
+     "label": "Violin II part",
      "file": "scores/peter-and-the-wolf.pdf"
     }
    ],
-   "blurb": "Three consecutive segments of one continuous run, recorded 12:38–13:02. Together they cover about 19 minutes.",
+   "blurb": "Three parts of one continuous run — about nineteen minutes altogether.",
    "notes": {
-    "What the part tells us": [
-     "Opens <b>Andantino, ♩=92</b>, 4/4, and the rehearsal marks are <b>boxed numbers</b>, not letters — so when Chris calls “three,” he means the boxed 3, not bar 3.",
-     "Our copies are the Kalmus edition (the set is stamped Fort Wayne Philharmonic). The PDF here is the same plates, so page and bar numbers match the paper part exactly.",
-     "At boxed <b>2</b> the tempo jumps to <b>Allegro ♩=176</b> — then 8 bars rest, boxed 3, 7 more bars rest. Boxed <b>4</b> returns to <i>Andantino, come prima</i>."
+    "Before you start": [
+     "Opens <b>Andantino, ♩=92</b> in 4/4. The rehearsal marks are <b>boxed numbers</b>, not letters — so when Chris calls “three,” he means the boxed 3, not bar 3.",
+     "The part here is the Kalmus edition, the same one on your stand. Bar numbers and page turns line up.",
+     "At boxed <b>2</b> the tempo jumps to <b>Allegro ♩=176</b>, then 8 bars rest, boxed 3, and 7 more bars rest. Boxed <b>4</b> comes back to <i>Andantino, come prima</i>."
     ],
     "Counting is the whole job": [
-     "The part is littered with the word <b>narrator</b> over held fermatas and rests. Those are your cues: the music waits for speech, and you come back in after it, not on a beat you can feel.",
-     "Mark the narration line next to every entry. The words are the cue — the bar line is not going to save you.",
+     "The word <b>narrator</b> sits over held fermatas and rests right through the part. Those are your cues — the music waits for the speaking, and you come back in after it, not on a beat you can feel.",
+     "Pencil the narration line next to every entry. The words are the cue; the bar line won't save you.",
      "Long multi-bar rests sit right next to tempo changes. Count them in the new tempo, not the old one."
     ],
     "Playing it": [
-     "Violin 2 accompanies Peter's theme rather than carrying it. When Violin 1 has the tune we are texture — keep the figures light.",
-     "The part switches <i>div. / unis. / non div.</i> repeatedly on page 1 alone. Pencil in which desk takes which note before rehearsal, not during.",
-     "Listen for the character voices so you know where you are: flute is the bird, oboe the duck, clarinet the cat, bassoon the grandfather, three horns the wolf, timpani and bass drum the hunters."
+     "We're accompanying Peter's theme, not carrying it. When Violin 1 has the tune we're texture — keep the figures light.",
+     "The part switches <i>div. / unis. / non div.</i> several times on page 1 alone. Sort out who takes which note before rehearsal, not during.",
+     "Listen for the characters so you always know where you are: flute is the bird, oboe the duck, clarinet the cat, bassoon the grandfather, three horns the wolf, timpani and bass drum the hunters."
     ]
    }
   },
@@ -360,26 +360,26 @@ window.PCO = {
    ],
    "scoreFiles": [
     {
-     "label": "Violin II part — Alfred 25039, 2 pages",
+     "label": "Violin II part",
      "file": "scores/the-typewriter.pdf"
     }
    ],
-   "blurb": "One continuous run of roughly two and three-quarter minutes.",
+   "blurb": "One continuous run, about two and three-quarter minutes.",
    "notes": {
-    "What the part tells us": [
+    "Before you start": [
      "<b>Allegro vivace</b>, cut time, one sharp (G major). Rehearsal marks are boxed numbers at <b>9, 27 and 43</b>.",
-     "Our PDF is Alfred 25039 — the same edition as the paper parts, so bar numbers match.",
-     "Working tempo is around <b>156 BPM</b>. Worth knowing: the same estimate run on our own phone recording came out at half that — the 8 kHz audio fools it — so do not trust a metronome mark derived from the rehearsal audio."
+     "The part here is Alfred 25039 — the same edition as the paper parts, so bar numbers match.",
+     "It sits around <b>156</b>. Start well under that and work it up."
     ],
     "Playing it": [
-     "We are accompaniment throughout; the typewriter is the soloist. Bar after bar is off-beat quarters and rests — uniformity matters more than anything else.",
+     "The typewriter is the soloist and we're the machine around it — bar after bar of off-beat quarters and rests. Evenness matters more than anything else here.",
      "Stay in the upper half of the bow and use very little of it. Long bows turn this texture to mush.",
-     "Watch the <i>div.</i> at bar 1, <i>unis.</i> at 25, <i>div.</i> again at 27, <i>unis.</i> at 41. The dynamic flips hard between <b>f</b> and <b>p</b> at those same points — the changes are paired, so one cues the other."
+     "Watch the <i>div.</i> at bar 1, <i>unis.</i> at 25, <i>div.</i> again at 27, <i>unis.</i> at 41 — the <b>f</b>/<b>p</b> flips land at the same spots, so one reminds you of the other."
     ],
     "Common traps": [
-     "Rushing the repeated off-beats. Subdivide against a metronome at 50–60% and work it up.",
-     "Letting the last note of a group lengthen. Keep the group even all the way to the end.",
-     "The bell and carriage-return sweep are your landmarks — use them to check you are where you think you are."
+     "Rushing the repeated off-beats. Slow the playback right down, lock in, then bring it up.",
+     "Letting the last note of a group stretch. Keep it even all the way to the end.",
+     "Losing your place — the bell and the carriage-return sweep are your landmarks."
     ]
    }
   },
@@ -441,25 +441,25 @@ window.PCO = {
    ],
    "scoreFiles": [
     {
-     "label": "Violin II part, page 1 — photo of the paper part",
+     "label": "Violin II part — page 1",
      "file": "scores/the-syncopated-clock-p1.jpg"
     }
    ],
-   "blurb": "One continuous run of roughly two and a half minutes.",
+   "blurb": "One continuous run, about two and a half minutes.",
    "notes": {
-    "What the part tells us": [
+    "Before you start": [
      "<b>Moderately</b>, 4/4, three sharps (A major). Rehearsal marks are boxed numbers at <b>11, 27 and 35</b>.",
-     "We play the <b>2006 Woodbury Music / EMI Mills arrangement</b> (plate 26663) — not the original 1945 orchestration, and not the Dabczynski school edition. If you go looking for a recording to practise against, make sure it matches.",
-     "Only page 1 is on file here, as a photo of the paper part. Shoot the remaining pages and they can go in beside it."
+     "We play the 2006 Woodbury arrangement, not the original 1945 orchestration. If you go hunting for a recording to play along with, check it matches — the bar numbers won't line up otherwise.",
+     "Only page 1 is here so far. If you can photograph the rest of yours, send it over and it'll go up."
     ],
     "Playing it": [
-     "Bar 1 is <b>pizz.</b> with an <i>sfz</i>, then <b>arco</b> from bar 3. It goes back to pizz. at 25 and arco again at 26 — two quick switches close together, so have the plan set before you start.",
-     "Our line is the tick of the clock: slurred pairs of quarters, marked <i>mp</i> with small swells. Lock to the woodblock, not to the tune.",
-     "From bar 19 the part opens out into longer slurred lines — that is the one place we stop being the clock. Let it sing, then snap back."
+     "Bar 1 is <b>pizz.</b> with an <i>sfz</i>, then <b>arco</b> from bar 3. Back to pizz. at 25, arco again at 26 — two quick switches close together, so have the plan set before you start.",
+     "Our line is the tick of the clock: slurred pairs of quarters at <i>mp</i> with small swells. Lock to the woodblock, not to the tune.",
+     "From bar 19 it opens out into longer slurred lines — the one place we stop being the clock. Let it sing, then snap back."
     ],
     "Common traps": [
-     "Following the syncopation. If the melody does something clever and you move with it, you have left the clock.",
-     "Sagging late on off-beats. Place them by subdividing, not by ear against the tune."
+     "Following the syncopation. If the melody does something clever and you go with it, you've left the clock.",
+     "Off-beats sagging late. Place them by subdividing, not by ear against the tune."
     ]
    }
   },
@@ -509,15 +509,15 @@ window.PCO = {
    ],
    "scoreFiles": [
     {
-     "label": "Violins II part — Caplet transcription",
+     "label": "Violins II part",
      "file": "scores/childrens-corner.pdf"
     }
    ],
-   "blurb": "No section recording for this one yet — only a reference performance, split by movement. Our paper parts are the Luck's Music Library reprint.",
+   "blurb": "No section recording yet — just a reference performance, split up by movement.",
    "notes": {
-    "Where this stands": [
-     "Chris has not sent a rehearsal recording for this piece, so there is nothing of ours to compare against yet. The reference recording is chunked by movement so you can at least work a single movement at a time.",
-     "Movement boundaries were found by detecting the pauses between movements rather than by ear — they look right, but spot-check them before relying on the timings."
+    "About this one": [
+     "Chris hasn't sent a rehearsal recording for this yet, so there's nothing of ours to play against. The reference performance is split by movement so you can at least work on one at a time.",
+     "Movement timings are approximate. Our parts are the Luck's reprint."
     ],
     "The six movements": [
      "<b>1. Doctor Gradus ad Parnassum</b> — perpetual motion, a piano exercise made affectionate.",
