@@ -25,7 +25,8 @@ class Player {
   build(){
     const r = this.root;
     r.innerHTML = `
-      <div class="track-label">${this.tr.label} · ${fmt(this.tr.dur)}</div>
+      <div class="track-label">${this.tr.label} · ${fmt(this.tr.dur)}${
+        this.tr.kind==='reference' ? ' <span class="badge">reference</span>' : ''}</div>
       <div class="scrub" data-scrub><div class="loopband" hidden></div><div class="head"></div></div>
       <div class="row">
         <button class="play" data-play>Play</button>

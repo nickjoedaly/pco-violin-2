@@ -50,14 +50,20 @@ p.tracks.forEach(t=>{
 
 // score slot
 score.innerHTML = (p.scoreFiles && p.scoreFiles.length)
-  ? p.scoreFiles.map(f=>`<div class="card"><a href="${f.file}">${f.label}</a></div>`).join('')
+  ? p.scoreFiles.map(f=>{
+      const img = /\.(png|jpe?g|webp)$/i.test(f.file);
+      return `<div class="card">
+        <div class="track-label">${f.label}</div>
+        ${img ? `<a href="${f.file}" target="_blank"><img class="score-img" src="${f.file}" alt="${f.label}"></a>`
+              : `<embed class="score-pdf" src="${f.file}#view=FitH" type="application/pdf">`}
+        <p class="hint"><a href="${f.file}" target="_blank">Open full size &rarr;</a></p>
+      </div>`;
+    }).join('')
   : `<div class="score-slot">
        <p style="margin:0 0 6px"><b>No score on file yet.</b></p>
        <p style="margin:0;font-size:13px">Scan or photograph your Violin 2 part, save it as
-          <code>scores/${p.id}.pdf</code> in this repo, then add it to this piece's
+          <code>scores/${p.id}.pdf</code>, then add it to this piece's
           <code>scoreFiles</code> in <code>assets/data.js</code>.</p>
-       <p style="margin:8px 0 0;font-size:13px">All three pieces are still under copyright,
-          so there is no legitimate free download to link — it has to come from our own parts.</p>
      </div>`;
 
 // notes

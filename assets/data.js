@@ -14,6 +14,7 @@ window.PCO = {
      "label": "Part 1",
      "file": "audio/peter-1.m4a",
      "dur": 534.5,
+     "kind": "rehearsal",
      "chunks": [
       {
        "t": 0.0,
@@ -130,6 +131,7 @@ window.PCO = {
      "label": "Part 2",
      "file": "audio/peter-2.m4a",
      "dur": 478.3,
+     "kind": "rehearsal",
      "chunks": [
       {
        "t": 0.0,
@@ -250,6 +252,7 @@ window.PCO = {
      "label": "Part 3",
      "file": "audio/peter-3.m4a",
      "dur": 131.6,
+     "kind": "rehearsal",
      "chunks": [
       {
        "t": 0.0,
@@ -274,22 +277,28 @@ window.PCO = {
      ]
     }
    ],
+   "scoreFiles": [
+    {
+     "label": "Violin II part — Kalmus edition, 8 pages",
+     "file": "scores/peter-and-the-wolf.pdf"
+    }
+   ],
    "blurb": "Three consecutive segments of one continuous run, recorded 12:38–13:02. Together they cover about 19 minutes.",
    "notes": {
-    "Our job in this piece": [
-     "Violin 2 spends much of this piece accompanying Peter's theme rather than carrying it. The melody sits in Violin 1; we supply the harmonic bed and the rhythmic pulse underneath it.",
-     "The single hardest skill here is not a passage — it is counting. Prokofiev writes long stretches of rest while the narrator speaks, and entries land immediately after speech rather than after a musical cue. Count every bar, every time."
+    "What the part tells us": [
+     "Opens <b>Andantino, ♩=92</b>, 4/4, and the rehearsal marks are <b>boxed numbers</b>, not letters — so when Chris calls “three,” he means the boxed 3, not bar 3.",
+     "Our copies are the Kalmus edition (the set is stamped Fort Wayne Philharmonic). The PDF here is the same plates, so page and bar numbers match the paper part exactly.",
+     "At boxed <b>2</b> the tempo jumps to <b>Allegro ♩=176</b> — then 8 bars rest, boxed 3, 7 more bars rest. Boxed <b>4</b> returns to <i>Andantino, come prima</i>."
     ],
-    "Character themes to listen for": [
-     "<b>Peter</b> — strings, C major, flowing and open. This is our music.",
-     "<b>Bird</b> — flute, high and quick. <b>Duck</b> — oboe, nasal and plodding. <b>Cat</b> — clarinet, low and sly.",
-     "<b>Grandfather</b> — bassoon, grumbling. <b>Wolf</b> — three horns, dark and sustained.",
-     "<b>Hunters</b> — timpani and bass drum. The closing procession is weighted and deliberate; resist rushing it."
+    "Counting is the whole job": [
+     "The part is littered with the word <b>narrator</b> over held fermatas and rests. Those are your cues: the music waits for speech, and you come back in after it, not on a beat you can feel.",
+     "Mark the narration line next to every entry. The words are the cue — the bar line is not going to save you.",
+     "Long multi-bar rests sit right next to tempo changes. Count them in the new tempo, not the old one."
     ],
-    "Practice priorities": [
-     "Mark every entry in your part with the narration line that precedes it. The words are your cue, not the bar line.",
-     "Scene changes bring tempo changes. Loop across each transition rather than practising each scene in isolation.",
-     "Keep the accompaniment figures light. When Violin 1 has the tune, we are texture, not competition."
+    "Playing it": [
+     "Violin 2 accompanies Peter's theme rather than carrying it. When Violin 1 has the tune we are texture — keep the figures light.",
+     "The part switches <i>div. / unis. / non div.</i> repeatedly on page 1 alone. Pencil in which desk takes which note before rehearsal, not during.",
+     "Listen for the character voices so you know where you are: flute is the bird, oboe the duck, clarinet the cat, bassoon the grandfather, three horns the wolf, timpani and bass drum the hunters."
     ]
    }
   },
@@ -301,9 +310,10 @@ window.PCO = {
    "tracks": [
     {
      "id": "typewriter",
-     "label": "Full run",
+     "label": "Our run",
      "file": "audio/typewriter.m4a",
      "dur": 162.5,
+     "kind": "rehearsal",
      "chunks": [
       {
        "t": 0.0,
@@ -346,22 +356,83 @@ window.PCO = {
        "name": "Chunk 10"
       }
      ]
+    },
+    {
+     "id": "typewriter-reference",
+     "label": "Reference recording",
+     "file": "audio/typewriter-reference.m4a",
+     "dur": 281.4,
+     "kind": "reference",
+     "chunks": [
+      {
+       "t": 0.0,
+       "name": "Chunk 1"
+      },
+      {
+       "t": 4.0,
+       "name": "Chunk 2"
+      },
+      {
+       "t": 45.4,
+       "name": "Chunk 3"
+      },
+      {
+       "t": 59.0,
+       "name": "Chunk 4"
+      },
+      {
+       "t": 97.4,
+       "name": "Chunk 5"
+      },
+      {
+       "t": 112.5,
+       "name": "Chunk 6"
+      },
+      {
+       "t": 149.6,
+       "name": "Chunk 7"
+      },
+      {
+       "t": 163.1,
+       "name": "Chunk 8"
+      },
+      {
+       "t": 214.5,
+       "name": "Chunk 9"
+      },
+      {
+       "t": 234.0,
+       "name": "Chunk 10"
+      },
+      {
+       "t": 265.1,
+       "name": "Chunk 11"
+      }
+     ]
     }
    ],
-   "blurb": "One continuous run of roughly two and three-quarter minutes.",
+   "scoreFiles": [
+    {
+     "label": "Violin II part — Alfred 25039, 2 pages",
+     "file": "scores/the-typewriter.pdf"
+    }
+   ],
+   "blurb": "Our run is about two and three-quarter minutes. The reference recording runs 4:41 — longer than the piece, so it likely carries applause or a repeat at the end; worth checking before you trust the back half.",
    "notes": {
-    "Our job in this piece": [
-     "This is a fast 2/4 novelty number, and the strings are accompaniment throughout. The typewriter is the soloist; we are the machine it sits inside.",
-     "Violin 2 plays crisp, short, repeated notes. Uniformity matters more than anything else — every note the same length, the same weight, the same place in the bow."
+    "What the part tells us": [
+     "<b>Allegro vivace</b>, cut time, one sharp (G major). Rehearsal marks are boxed numbers at <b>9, 27 and 43</b>.",
+     "Our PDF is Alfred 25039 — the same edition as the paper parts, so bar numbers match.",
+     "Tempo estimated from the reference recording is about <b>156 BPM</b>. (The same estimate run on our own phone recording came out at half that — the 8 kHz audio fools it, so trust the reference.)"
     ],
-    "Technique": [
-     "Stay in the upper half of the bow and use very little of it. Long bows here turn the texture to mush.",
-     "Keep the stroke on the string and brushed rather than thrown. A spiccato that bounces unevenly will not line up with the typewriter.",
-     "The bell and the carriage-return sweep are structural landmarks. Use them to check you are where you think you are."
+    "Playing it": [
+     "We are accompaniment throughout; the typewriter is the soloist. Bar after bar is off-beat quarters and rests — uniformity matters more than anything else.",
+     "Stay in the upper half of the bow and use very little of it. Long bows turn this texture to mush.",
+     "Watch the <i>div.</i> at bar 1, <i>unis.</i> at 25, <i>div.</i> again at 27, <i>unis.</i> at 41. The dynamic flips hard between <b>f</b> and <b>p</b> at those same points — the changes are paired, so one cues the other."
     ],
     "Common traps": [
-     "Rushing repeated eighths. The pull to accelerate through them is strong; subdivide against a metronome.",
-     "Letting the last note of a repeated group get longer. Keep the group even to the end."
+     "Rushing the repeated off-beats. Subdivide against a metronome at 50–60% and work it up.",
+     "Letting the last note of a group lengthen. Keep the group even all the way to the end.",
+     "The bell and carriage-return sweep are your landmarks — use them to check you are where you think you are."
     ]
    }
   },
@@ -369,13 +440,14 @@ window.PCO = {
    "id": "the-syncopated-clock",
    "title": "The Syncopated Clock",
    "composer": "Leroy Anderson",
-   "sub": "1945 — for orchestra with woodblock",
+   "sub": "1945, arr. 2006 Woodbury Music — for orchestra with woodblock",
    "tracks": [
     {
      "id": "syncopated-clock",
-     "label": "Full run",
+     "label": "Our run",
      "file": "audio/syncopated-clock.m4a",
      "dur": 153.4,
+     "kind": "rehearsal",
      "chunks": [
       {
        "t": 0.0,
@@ -420,19 +492,93 @@ window.PCO = {
      ]
     }
    ],
+   "scoreFiles": [
+    {
+     "label": "Violin II part, page 1 — photo of the paper part",
+     "file": "scores/the-syncopated-clock-p1.jpg"
+    }
+   ],
    "blurb": "One continuous run of roughly two and a half minutes.",
    "notes": {
-    "Our job in this piece": [
-     "The woodblock is the clock, and it ticks straight through. The joke of the piece is the melody pulling against that steady tick. Our job is usually to be part of the clock, not part of the joke.",
-     "Violin 2 typically has either the steady tick-tock figure or the off-beat answer. Either way, lock to the percussion, not to the tune."
+    "What the part tells us": [
+     "<b>Moderately</b>, 4/4, three sharps (A major). Rehearsal marks are boxed numbers at <b>11, 27 and 35</b>.",
+     "We play the <b>2006 Woodbury Music / EMI Mills arrangement</b> (plate 26663) — not the original 1945 orchestration, and not the Dabczynski school edition. If you go looking for a recording to practise against, make sure it matches.",
+     "Only page 1 is on file here, as a photo of the paper part. Shoot the remaining pages and they can go in beside it."
     ],
-    "Technique": [
-     "Short, detached, consistent. Same bow placement every time.",
-     "When we have off-beats, place them by subdividing from the tick — do not place them by ear against the melody, which will drag you late."
+    "Playing it": [
+     "Bar 1 is <b>pizz.</b> with an <i>sfz</i>, then <b>arco</b> from bar 3. It goes back to pizz. at 25 and arco again at 26 — two quick switches close together, so have the plan set before you start.",
+     "Our line is the tick of the clock: slurred pairs of quarters, marked <i>mp</i> with small swells. Lock to the woodblock, not to the tune.",
+     "From bar 19 the part opens out into longer slurred lines — that is the one place we stop being the clock. Let it sing, then snap back."
     ],
     "Common traps": [
-     "Following the syncopation. If the melody is doing something clever and you find yourself moving with it, you have left the clock.",
-     "Letting off-beats sag late. They should feel almost early against where instinct puts them."
+     "Following the syncopation. If the melody does something clever and you move with it, you have left the clock.",
+     "Sagging late on off-beats. Place them by subdividing, not by ear against the tune."
+    ]
+   }
+  },
+  {
+   "id": "childrens-corner",
+   "title": "Children's Corner",
+   "composer": "Claude Debussy, orch. André Caplet",
+   "sub": "L. 113 (1906–08, orchestrated 1910) — suite in six movements",
+   "tracks": [
+    {
+     "id": "childrens-corner-reference",
+     "label": "Reference recording",
+     "file": "audio/childrens-corner-reference.m4a",
+     "dur": 1008.3,
+     "kind": "reference",
+     "chunks": [
+      {
+       "t": 0,
+       "name": "lead-in"
+      },
+      {
+       "t": 7.4,
+       "name": "1. Doctor Gradus ad Parnassum"
+      },
+      {
+       "t": 151.8,
+       "name": "2. Jimbo's Lullaby"
+      },
+      {
+       "t": 379.4,
+       "name": "3. Serenade for the Doll"
+      },
+      {
+       "t": 541.0,
+       "name": "4. The Snow is Dancing"
+      },
+      {
+       "t": 697.2,
+       "name": "5. The Little Shepherd"
+      },
+      {
+       "t": 838.0,
+       "name": "6. Golliwogg's Cakewalk"
+      }
+     ]
+    }
+   ],
+   "scoreFiles": [
+    {
+     "label": "Violins II part — Caplet transcription",
+     "file": "scores/childrens-corner.pdf"
+    }
+   ],
+   "blurb": "No section recording for this one yet — only a reference performance, split by movement. Our paper parts are the Luck's Music Library reprint.",
+   "notes": {
+    "Where this stands": [
+     "Chris has not sent a rehearsal recording for this piece, so there is nothing of ours to compare against yet. The reference recording is chunked by movement so you can at least work a single movement at a time.",
+     "Movement boundaries were found by detecting the pauses between movements rather than by ear — they look right, but spot-check them before relying on the timings."
+    ],
+    "The six movements": [
+     "<b>1. Doctor Gradus ad Parnassum</b> — perpetual motion, a piano exercise made affectionate.",
+     "<b>2. Jimbo's Lullaby</b> — the elephant; heavy, slow, low.",
+     "<b>3. Serenade for the Doll</b> — light and plucked in character; Caplet leans on pizzicato colour.",
+     "<b>4. The Snow is Dancing</b> — even, quiet, relentless quavers. Ensemble precision at low dynamic is the whole problem.",
+     "<b>5. The Little Shepherd</b> — exposed and rubato, built around a solo line.",
+     "<b>6. Golliwogg's Cakewalk</b> — the cakewalk; syncopated, brash, with a mock-Wagner middle section."
     ]
    }
   }
