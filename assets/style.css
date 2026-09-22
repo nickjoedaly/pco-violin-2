@@ -3,9 +3,9 @@
      then lightened, because this is a tool you sit with for an hour. */
   --bg:#f5f2ea; --panel:#fbf9f5; --ink:#1f1c16; --muted:#6f6857;
   --line:#ddd6c6;
-  /* Marine for anything you press, oxide for the loop. Both are the studio
-     site's accents, opened up a couple of steps so they read warm, not austere. */
-  --accent:#2d7a6b; --accent-soft:#e2ece7; --accent-ink:#f5f2ea;
+  /* Red for anything you press, a deeper red for the loop band. The scrub
+     track stays neutral so the red reads against it. */
+  --accent:#a8382a; --accent-soft:#ece7dd; --accent-ink:#fbf7f2;
   --loop:#c2561f; --ok:#4d6b33;
   --radius:14px;
   --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
@@ -16,12 +16,12 @@
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){
   --bg:#16181a; --panel:#1e2123; --ink:#eae7df; --muted:#948d7f;
   --line:#32373a;
-  --accent:#6fc0ad; --accent-soft:#1e2f2b; --accent-ink:#12201d;
+  --accent:#e2705c; --accent-soft:#272a2c; --accent-ink:#241009;
   --loop:#f08a4b; --ok:#a9c28a;}}
 :root[data-theme=dark]{
   --bg:#16181a; --panel:#1e2123; --ink:#eae7df; --muted:#948d7f;
   --line:#32373a;
-  --accent:#6fc0ad; --accent-soft:#1e2f2b; --accent-ink:#12201d;
+  --accent:#e2705c; --accent-soft:#272a2c; --accent-ink:#241009;
   --loop:#f08a4b; --ok:#a9c28a;}
 
 *{box-sizing:border-box}
@@ -55,7 +55,7 @@ p,li{font-size:15px}
 .scrub{position:relative;height:44px;background:var(--accent-soft);border-radius:10px;
   overflow:hidden;cursor:pointer;margin:10px 0;border:1px solid var(--line)}
 .scrub .chunk{position:absolute;top:0;bottom:0;border-right:1px solid var(--line)}
-.scrub .chunk:hover{background:rgb(45 122 107 / .16)}
+.scrub .chunk:hover{background:rgb(168 56 42 / .14)}
 .scrub .chunk span{position:absolute;left:4px;top:3px;font-family:var(--mono);
   font-size:9px;color:var(--muted);pointer-events:none;white-space:nowrap}
 .scrub .loopband{position:absolute;top:0;bottom:0;background:rgb(194 86 31 / .20);
