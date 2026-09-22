@@ -43,12 +43,20 @@ title.textContent = p.title;
 sub.textContent   = p.composer + ' · ' + p.sub;
 blurb.textContent = p.blurb;
 
-p.tracks.forEach(t=>{
-  const d = document.createElement('div');
-  d.className = 'card';
-  players.appendChild(d);
-  new PCOPlayer(t, d);
-});
+if (p.tracks.length) {
+  p.tracks.forEach(t=>{
+    const d = document.createElement('div');
+    d.className = 'card';
+    players.appendChild(d);
+    new PCOPlayer(t, d);
+  });
+} else {
+  players.innerHTML = `<div class="score-slot">
+      <p style="margin:0 0 6px"><b>No recording yet.</b></p>
+      <p style="margin:0;font-size:13px">When Chris sends one for this piece,
+         send it to Nick and it'll appear here with loopable chunks.</p>
+    </div>`;
+}
 
 // score slot
 score.innerHTML = (p.scoreFiles && p.scoreFiles.length)

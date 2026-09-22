@@ -54,11 +54,14 @@ document.getElementById('list').innerHTML = PCO.pieces.map(p=>{
   const total = p.tracks.reduce((s,t)=>s+t.dur,0);
   const chunks = p.tracks.reduce((s,t)=>s+t.chunks.length,0);
   const m = Math.floor(total/60), s = Math.round(total%60);
+  const meta = p.tracks.length
+    ? `${p.tracks.length} recording${p.tracks.length>1?'s':''}
+       · ${m}:${String(s).padStart(2,'0')} · ${chunks} chunks`
+    : 'Nothing on file yet';
   return `<a class="card piece-link" href="piece.html?p=${p.id}">
     <div class="t">${p.title}</div>
     <div class="c">${p.composer} · ${p.sub}</div>
-    <div class="meta">${p.tracks.length} recording${p.tracks.length>1?'s':''}
-      · ${m}:${String(s).padStart(2,'0')} · ${chunks} chunks</div></a>`;
+    <div class="meta">${meta}</div></a>`;
 }).join('');
 </script>
 </body></html>
